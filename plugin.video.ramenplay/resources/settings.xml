@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="General">
+        <setting id="debug" type="bool" label="Modo debug" default="false"/>
+        <setting id="timeout" type="number" label="Timeout requests (seg)" default="8"/>
+        <setting id="health_check" type="bool"
+                 label="Verificar servidores antes de mostrarlos"
+                 default="true"/>
+        <setting id="health_check_timeout" type="number"
+                 label="Timeout del health check (seg)" default="5"/>
+    </category>
+    <category label="Proxy (solo reproduccion HLS externo)">
+        <setting id="proxy_player_enabled" type="bool" label="Usar proxy" default="false"/>
+        <setting id="proxy_host" type="text" label="Host" default="127.0.0.1"
+                 enable="eq(-1,true)"/>
+        <setting id="proxy_port" type="number" label="Puerto" default="8080"
+                 enable="eq(-2,true)"/>
+        <setting id="proxy_type" type="labelenum" label="Tipo"
+                 values="http|socks5|socks5h" default="http"
+                 enable="eq(-3,true)"/>
+    </category>
+</settings>
